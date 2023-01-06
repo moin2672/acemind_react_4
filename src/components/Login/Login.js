@@ -11,6 +11,51 @@ const Login = (props) => {
   const [passwordIsValid, setPasswordIsValid] = useState();
   const [formIsValid, setFormIsValid] = useState(false);
 
+/*
+useEffect(()=>{
+  console.log('RUNNING EFFECT')
+})
+
+runs when the component FIRST mounts & also for EVERY STATE UPDATE
+
+useEffect(()=>{
+  console.log('RUNNING EFFECT')
+},[])
+
+runs ONLY ONCE when the component FIRST mounted
+
+useEffect(()=>{
+  console.log('RUNNING EFFECT')
+},[enteredPassword])
+
+runs when the component FIRST mounts & whenever was reevaluated or whenever the enteredPassword changes it runs
+
+seEffect(()=>{
+  console.log('RUNNING EFFECT')
+
+  return ()=>{
+    console.log('EFFECT CLEANUP')
+  }
+},[enteredPassword])
+
+if it has depedency like enteredPassword, then RUNNING EFFECT runs at the begining and 
+EFFECT CLEANUP runs before the RUNNING EFFECT, whenever the enteredPassword changes.
+
+useEffect(()=>{
+  console.log('RUNNING EFFECT')
+
+  return ()=>{
+    console.log('EFFECT CLEANUP')
+  }
+},[])
+
+without dependency, the RUNNING EFFECT runs at the begining ONCE &
+EFFECT CLEANUP runs at the end when the component is removed, i.e. when we moved from LOGIN to HOME component
+
+*/
+
+
+
   useEffect(() => {
     const identifier = setTimeout(() => {
       console.log('Checking form validity!');
