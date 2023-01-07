@@ -48,8 +48,7 @@ const Login = (props) => {
     };
   }, []);
 
-  // isValid @lias assignment to emailIsValid
-  const { isValid: emailIsValid } = emailState; //object destructuring
+  const { isValid: emailIsValid } = emailState;
   const { isValid: passwordIsValid } = passwordState;
 
   useEffect(() => {
